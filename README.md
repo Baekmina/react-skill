@@ -2,9 +2,10 @@
 
 1장 리액트 시작\
 2장 JSX\
-3장 컴포넌트\
-4장 이벤트 핸들링\
-5장 ref: DOM에 이름 달기 (진행중)\
+3장 컴포넌트 (Compontents)\
+4장 이벤트 핸들링 (EventHandling)\
+5장 ref: DOM에 이름 달기 (Ref)\
+6장 컴포넌트 반복 (Map)\
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
