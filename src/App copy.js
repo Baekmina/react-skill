@@ -7,6 +7,7 @@ import ValidationSample from "./Ref/ValidationSample";
 import ScrollBox from "./Ref/ScrollBox";
 import IterationSample from "./Map/IterationSample";
 import LifyCycleSamle from "./LifyCycle/LifyCycleSamle";
+import ErrorBoundary from "./LifyCycle/ErrorBoundary";
 
 // 랜덤 색상 생성
 function getRendomColor() {
@@ -31,7 +32,10 @@ class App extends Component {
     return (
       <div>
         <button onClick={this.handleClick}>랜덤 색상</button>
-        <LifyCycleSamle color={this.state.color} />
+        {/* error를 잡아내기 위한 컴포넌트 */}
+        <ErrorBoundary>
+          <LifyCycleSamle color={this.state.color} />
+        </ErrorBoundary>
       </div>
     )
   }
