@@ -6,6 +6,9 @@
 4장 이벤트 핸들링 (EventHandling)\
 5장 ref: DOM에 이름 달기 (Ref)\
 6장 컴포넌트 반복 (Map)\
+7장 컴포넌트의 라이프사이클 메서드 (LifeCycle)\
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
