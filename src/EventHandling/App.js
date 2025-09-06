@@ -1,4 +1,4 @@
-import EventPractice from "./EventHandling/EventPractice";
+import EventPractice from "./EventPractice";
 
 const App = () => {
   return <EventPractice />
