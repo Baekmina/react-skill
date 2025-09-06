@@ -1,19 +1,10 @@
 import { useState } from "react";
-import Info from "./Hooks/useEffect/Info";
-import Counter from "./Hooks/useState/Counter";
+import Counter from "./Hooks/useReducer/Counter";
+import Info from "./Hooks/useReducer/Info";
 
 const App = () => {
-	const [visible, setVisible] = useState(false);
-
 	return (
-		<div>
-			<button onClick={() => setVisible(!visible)}>
-				{visible ? '숨기기' : '보이기'}
-			</button>
-			<hr />
-			{visible && <Info />}
-		</div>
-		// <Counter />
+		<Info />
 	)
 }
 
