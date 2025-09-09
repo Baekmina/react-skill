@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Counter from "./Hooks/useReducer/Counter";
-import Info from "./Hooks/useReducer/Info";
 import Average from "./Hooks/useRef/Average";
 import RefSample from "./Hooks/useRef/RefSample";
+import Info from "./Hooks/customHooks/Info";
 
 const App = () => {
 	return (
-		<RefSample />
+		<Info />
 	)
 }
 
