@@ -1,13 +1,18 @@
-import { useState } from "react";
-import Counter from "./Hooks/useReducer/Counter";
-import Average from "./Hooks/useRef/Average";
-import RefSample from "./Hooks/useRef/RefSample";
-import Info from "./Hooks/customHooks/Info";
+import { Component } from "react";
+import SassComponent from "./Styling/SASS/SassComponent";
 
-const App = () => {
-	return (
-		<Info />
-	)
+class App extends Component {
+	render() {
+		return (
+			<SassComponent />
+		)
+	}
 }
+
+// const App = () => {
+// 	return (
+// 		<SassComponent />
+// 	)
+// }
 
 export default App;
