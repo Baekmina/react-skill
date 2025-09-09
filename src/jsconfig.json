@@ -1,6 +1,7 @@
 // 절대경로 설정
 {
     "compilerOptions": {
-        "baseUrl": "src"
+        "baseUrl": "src",
+        "target": "es6"
     }
 }
