@@ -15,7 +15,7 @@
 - useCallback
 - custom hooks
 
-9장 컴포넌트 스타일링
+9장 컴포넌트 스타일링 (Styling)
 - CSS
 - SASS
 - CSS Module
