@@ -7,7 +7,14 @@
 5장 ref: DOM에 이름 달기 (Ref)\
 6장 컴포넌트 반복 (Map)\
 7장 컴포넌트의 라이프사이클 메서드 (LifeCycle)\
-9장 Hooks (Hooks)\
+8장 Hooks (Hooks)\
+ - 1. useState\
+ - 2. useEffect\
+ - 3. useReducer\
+ - 4. useMemo\
+ - 5. useCallback\
+ - 6. custom hooks\
+10장 컴포넌트 스타일링\
 
 
 
