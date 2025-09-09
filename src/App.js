@@ -1,10 +1,12 @@
 import { Component } from "react";
 import SassComponent from "./Styling/SASS/SassComponent";
+import CSSModule from "./Styling/CSSModule/CSSModule";
 
 class App extends Component {
 	render() {
 		return (
-			<SassComponent />
+			<CSSModule />
+			// <SassComponent />
 		)
 	}
 }
