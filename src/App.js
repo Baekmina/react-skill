@@ -3,41 +3,36 @@ import TodoInsert from "./Project/todo-app/components/TodoInsert/TodoInsert";
 import TodoList from "./Project/todo-app/components/TodoList/TodoList";
 import TodoTemplate from "./Project/todo-app/components/TodoTemplate/TodoTemplate";
 
-const App = () => {
-	const [todos, setTodos] = useState([
-		{
-			id: 1,
-			text: "리액트의 기초 알아보기",
-			checked: true,
-		},
-		{
-			id: 2,
-			text: "컴포넌트 스타일링해 보기",
-			checked: true,
-		},
-		{
-			id: 3,
-			text: "일정 관리 앱 만들어 보기",
+function createBulkTodos() {
+	const array = [];
+	for (let i = 1; i <= 2500; i++ ) {
+		array.push({
+			id: i,
+			text: `할 일 ${i}`,
 			checked: false,
-		}
-	])
+		})
+	}
+	return array
+}
 
-	const nextId = useRef(4);
+const App = () => {
+	const [todos, setTodos] = useState(createBulkTodos)
 
-	const onInsert = useCallback((text) => { // 새로운 todo의 내용(text)을 받는 것임.
+	// 고윳값으로 사용될 id
+	// ref를 사용하여 변수 담기
+	const nextId = useRef(2501);
+
+	const onInsert = useCallback((text) => {
 		const todo = {
 			id: nextId.current,
 			text,
 			checked: false,
 		}
-		setTodos(todos.concat(todo)); // todos에 새로운 todo 객체 추가하기
-		nextId.current += 1; // id + 1 해주기
+		setTodos(todos.concat(todo));
+		nextId.current += 1;
 	}, [todos])
 
-	const onRemove = useCallback((id) => { // 삭제하고 싶은 항목 = id
-		// filter: 배열을 돌면서 true 값만 남김.
-		// todo.id가 id랑 같지 않은 경우 => ture => 배열에 남김
-		// todo.id가 id랑 같은 경우 => false => 배열에서 제거
+	const onRemove = useCallback((id) => {
 		setTodos(todos.filter(todo => todo.id !== id))
 	}, [todos])
 
