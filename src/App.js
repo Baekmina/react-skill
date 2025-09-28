@@ -5,15 +5,14 @@ import TodoTemplate from "./Project/todo-app/components/TodoTemplate/TodoTemplat
 
 function createBulkTodos() {
 	const array = [];
-	for (let i = 1; i <= 2500; i++) {
+	for (let i = 1; i <= 2500; i++ ) {
 		array.push({
 			id: i,
 			text: `할 일 ${i}`,
-			checked: false
-		});
+			checked: false,
+		})
 	}
-
-	return array;
+	return array
 }
 
 const App = () => {
@@ -39,9 +38,9 @@ const App = () => {
 
 	const onToggle = useCallback((id) => {
 		setTodos(
-			todos.map((todo) => (
-				todo.id === id ? {...todo, checked: !todo.checked} : todo 
-			))
+			todos.map(todo =>
+				todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+			)
 		)
 	}, [todos])
 
